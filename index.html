@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,51 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="icon" sizes="192x192" href="assets/reactssa.png">
 </head>
+
 <body>
     <div class="container">
-        <img src="assets/react-logo-fitas.png" alt="Logo do React Salvador composto por fitas do Senhor do Bomfim">
-        <img src="assets/react-ssa-text.png" alt="Logo do React Salvador composto por fitas do Senhor do Bomfim">
+        <img id="logo-image" src="assets/react-logo-fitas.png" alt="Logo do React Salvador composto por fitas do Senhor do Bomfim">
+        <img id="logo-text" src="assets/react-ssa-text.png" alt="Logo do React Salvador composto por fitas do Senhor do Bomfim">
+
+        <form id="meetup-notification-form">
+            <h2>Quer ser avisado sobre os próximos encontros?</h2>
+            <input type="email" id="email" placeholder="Digite seu email e pressione enter" />
+        </form>
+
         <a href="https://github.com/ReactSSA" class="github-link">ReactSSA</a>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-database.js"></script>
+    
+    <script>
+        var config = {
+            apiKey: "AIzaSyDthLRn1-FtkR9duSYmGO5vcxv27Mw6zfY",
+            authDomain: "reactssa-d6ce0.firebaseapp.com",
+            databaseURL: "https://reactssa-d6ce0.firebaseio.com",
+            projectId: "reactssa-d6ce0",
+            storageBucket: "reactssa-d6ce0.appspot.com",
+            messagingSenderId: "146802970530"
+        };
+        firebase.initializeApp(config);
+
+        var emailsStore = firebase.database().ref("emails");
+
+        document.getElementById("meetup-notification-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            var emailInputEl = document.getElementById("email");
+            emailsStore.push({
+                email: emailInputEl.value
+            }).then(function() {
+                emailInputEl.value = "Pronto, anotado!";
+                emailInputEl.disabled = true;
+                emailInputEl.style.color = "#229400";
+            }).catch(function() {
+                emailInputEl.value = "Erro, nos avise lá no github!";
+            });
+        })
+    </script>
 </body>
+
 </html>
