@@ -49,11 +49,3 @@ body {
 		-webkit-transform: rotate(360deg);
     }
 }
-.rotating {
-    margin-bottom: 2rem;
-	-webkit-animation: rotating 10s linear infinite;
-	-moz-animation: rotating 10s linear infinite;
-	-ms-animation: rotating 10s linear infinite;
-	-o-animation: rotating 10s linear infinite;
-	animation: rotating 10s linear infinite;
-}
