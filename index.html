@@ -21,12 +21,16 @@
             <input type="email" id="email" placeholder="Digite seu email e pressione enter" />
         </form>
 
-        <a href="https://github.com/ReactSSA" class="github-link">ReactSSA</a>
+        <div class="social">
+          <a rel="external" target="_blank" href="https://github.com/ReactSSA" class="github">ReactSSA</a>
+          <a rel="external" target="_blank" href="https://twitter.com/ReactSSA" class="twitter">@ReactSSA</a>
+          <a rel="external" target="_blank" href="https://facebook.com/reactssa" class="facebook">React Salvador</a>
+        </div>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-database.js"></script>
-    
+
     <script>
         var config = {
             apiKey: "AIzaSyDthLRn1-FtkR9duSYmGO5vcxv27Mw6zfY",
@@ -42,7 +46,7 @@
 
         document.getElementById("meetup-notification-form").addEventListener("submit", function(e) {
             e.preventDefault();
-            
+
             var emailInputEl = document.getElementById("email");
             emailsStore.push({
                 email: emailInputEl.value

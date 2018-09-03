@@ -18,15 +18,39 @@ body {
     margin-bottom: 30px;
 }
 
-.github-link {
-    display: block;
+.social {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 2em auto;
+  height: 20px;
+  width: auto;
+}
+
+.social a {
+  color: white;
+  flex: 0 1 auto;
+  height: auto;
+  margin: 0 1em;
+  padding-left: 24px;
+  text-decoration: none;
+}
+
+.social a:hover {
+  text-decoration: underline;
+}
+
+.github {
     background: url(github.svg) no-repeat;
     background-size: contain;
-    width: 30px;
-    height: 30px;
-    overflow: hidden;
-    line-height: 200px;
-    margin-top: 20px;
+}
+.twitter {
+    background: url(twitter.svg) no-repeat;
+    background-size: contain;
+}
+.facebook {
+    background: url(facebook.svg) no-repeat;
+    background-size: contain;
 }
 
 #meetup-notification-form {
