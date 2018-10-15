@@ -7,58 +7,115 @@
     <meta name="google-site-verification" content="GxO-i5Zl145GKku-BZmMfvrk3xPel-kICq1ICEd3LKc" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>React Salvador</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="icon" sizes="192x192" href="assets/reactssa.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" sizes="192x192" href="assets/imgs/reactssa.png">
 </head>
 
-<body>
-    <div class="container">
-        <img id="logo-image" src="assets/react-logo-fitas.png" alt="Logo do React Salvador composto por fitas do Senhor do Bomfim">
-        <img id="logo-text" src="assets/react-ssa-text.png" alt="Logo do React Salvador composto por fitas do Senhor do Bomfim">
+<body id="main">
+    <header class="general-header">
+        <div class="max-content">
+            <a href="#main" class="txtLogo"><strong>React</strong>SSA</a>
+            <nav>
+                <a href="#comunidade">Comunidade</a>
+                <a href="#meetup">Meetups</a>
+                <a href="#redes">Redes</a>
+            </nav>
+        </div>
+    </header>
 
-        <form id="meetup-notification-form">
-            <h2>Quer ser avisado sobre os próximos encontros?</h2>
-            <input type="email" id="email" placeholder="Digite seu email e pressione enter" />
-        </form>
+    <section class="aboutComunitry">
+        <div class="max-content">
+            <div class="aboutComunitryLeftContent">
+                <h1>React Salvador</h1>
+                <p>Comunidade de Desenvolvedores de React e React Native em Salvador.</p>
+            </div>
+            <div class="aboutComunitryRightContent">
+                <span class="backgroundElement"></span>
+                <span class="box-logo">
+                    <div class="logo"></div>
+                </span>
+            </div>
+        </div>
+    </section>
 
-        <div class="social">
-          <a rel="external" target="_blank" href="https://github.com/ReactSSA" class="github">ReactSSA</a>
-          <a rel="external" target="_blank" href="https://twitter.com/ReactSSA" class="twitter">@ReactSSA</a>
-          <a rel="external" target="_blank" href="https://facebook.com/reactssa" class="facebook">React Salvador</a>
+    <section id="comunidade" class="Comunity">
+        <div class="max-content">
+            <div class="aboutComunitryLeftContent">
+                <h1>A comunidade</h1>
+                <p>Nosso objetivo é trocar conhecimentos, fomentar as tecnologias envolvidas no ecossistema React, além de conhecer e interagir
+                com os desenvolvedores de Salvador e região metropolitana que trabalham ou tenham interesse em trabalhar
+                com React.</p>
+            </div>
+            <div class="aboutComunitryRightContent">
+                <span class="backgroundElement"></span>
+                <span class="box-logo">
+                    <div class="logo"></div>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="meetup" class="meetups">
+        <div class="max-content">
+            <h1>Últimos meetups</h1>
+
+            <div class="meetups-list">
+                <div class="meetup">
+                    <h3>30/08/2018</h3>
+                    <h2>Testes em componentes React.</h2>
+                </div>
+                <div class="meetup">
+                    <h3>02/08/2018</h3>
+                    <h2>GraphQL - A evolução do REST</h2>
+                </div>
+                <div class="meetup">
+                    <h3>19/07/2018</h3>
+                    <h2>Estruturando componentes</h2>
+                </div>
+                <div class="meetup">
+                    <h3>28/06/2018</h3>
+                    <h2>A pedra no sapato do front-end</h2>
+                </div>
+                <div class="meetup">
+                    <h3>07/06/2018</h3>
+                    <h2>Redux vs MobX - Gerenciadores de estado para React</h2>
+                </div>
+                <div class="meetup">
+                    <h3>10/05/2018</h3>
+                    <h2>ES6+ O presente e o futuro do JavaScript</h2>
+                </div>
+                <div class="meetup">
+                    <h3>10/04/2018</h3>
+                    <h2>Da Web ao App</h2>
+                </div>
+            </div>
+
+            <form id="meetup-notification-form">
+                <h2>Quer ser avisadx sobre os próximos encontros?</h2>
+                <fieldset>
+                    <input type="email" id="email" name="email" autocomplete="off" placeholder="Digite seu email" />
+                    <button id="button"><i class="fas fa-check"></i>Me avise</button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    
+    <div id="redes" class="social">
+        <div class="max-content">
+            <a rel="external" target="_blank" class="slack" href="https://bit.ly/ReactSSA_invite"> <i class="fab fa-slack-hash"></i>Entre no nosso slack</a>
+            <a rel="external" target="_blank" href="https://github.com/ReactSSA" class="github"><i class="fab fa-github"></i></a>
+            <a rel="external" target="_blank" href="https://twitter.com/ReactSSA" class="twitter"><i class="fab fa-twitter-square"></i></a>
+            <a rel="external" target="_blank" href="https://facebook.com/reactssa" class="facebook"><i class="fab fa-facebook"></i></a>
         </div>
     </div>
-
+    
+      
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed|Patua+One|Merriweather+Sans" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-database.js"></script>
-
-    <script>
-        var config = {
-            apiKey: "AIzaSyDthLRn1-FtkR9duSYmGO5vcxv27Mw6zfY",
-            authDomain: "reactssa-d6ce0.firebaseapp.com",
-            databaseURL: "https://reactssa-d6ce0.firebaseio.com",
-            projectId: "reactssa-d6ce0",
-            storageBucket: "reactssa-d6ce0.appspot.com",
-            messagingSenderId: "146802970530"
-        };
-        firebase.initializeApp(config);
-
-        var emailsStore = firebase.database().ref("emails");
-
-        document.getElementById("meetup-notification-form").addEventListener("submit", function(e) {
-            e.preventDefault();
-
-            var emailInputEl = document.getElementById("email");
-            emailsStore.push({
-                email: emailInputEl.value
-            }).then(function() {
-                emailInputEl.value = "Pronto, anotado!";
-                emailInputEl.disabled = true;
-                emailInputEl.style.color = "#229400";
-            }).catch(function() {
-                emailInputEl.value = "Erro, nos avise lá no github!";
-            });
-        })
-    </script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
