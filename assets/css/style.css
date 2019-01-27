@@ -10,11 +10,10 @@
     --color-lightGray: #e6e6e6;
     --color-gray: #bbbbbb;
     --color-green: #269535;
-    
+
     --color-lightText: #888888;
     --color-text: #5a5a5a;
 }
-
 
 /* animations */
 @keyframes slideCenter{
@@ -22,7 +21,6 @@
         transform: translate(0,0);
     }
 }
-
 @keyframes fadeScaleOut{
     from{
         transform: scale(1.2)
@@ -36,7 +34,6 @@
         width: 0;
     }
 }
-
 @keyframes textFadeIn{
     from{
         opacity: 0;
@@ -47,7 +44,6 @@
         transform: translate(0,0) rotate(0);
     }
 }
-
 @keyframes loadingFadeIn{
     from{
         transform: scale(0.6) translate(-50%,-50%);
@@ -70,7 +66,6 @@
 }
 
 /* styles */
-
 .general-header{
     position: fixed;
     top: 0;
@@ -168,7 +163,6 @@
     animation: width 0.2s ease-out 0.7s both;
 }
 
-
 .aboutComunitryLeftContent p{
     font-family: var(--font-texts);
     font-size: 23px;
@@ -179,7 +173,7 @@
     animation: textFadeIn 0.5s ease-in-out 0.4s forwards;
 }
 
-.aboutComunitryRightContent { 
+.aboutComunitryRightContent {
     width: 325px;
     height: 400px;
     margin-left: auto;
@@ -267,11 +261,11 @@
 .Comunity .aboutComunitryRightContent .box-logo:before{
     transform: translate(100%,0);
 }
- 
+
 .Comunity .aboutComunitryRightContent{
     order: -1;
     margin-left: 0;
-    margin-right:auto; 
+    margin-right:auto;
 }
 
 .Comunity .aboutComunitryRightContent .box-logo{
@@ -310,7 +304,7 @@
     padding: 20px;
     width: calc(33.33% - 62px);
     min-width: 225px;
-    height: 90px;
+    height: 120px;
     background: var(--color-verylightBlue);
     border: 1px solid var(--color-lightBlue);
     margin: 10px;
@@ -319,15 +313,29 @@
 
 .meetup h2{
     font-family: var(--font-subtitle);
-    font-size: 22px;
+    font-size: 1.4em;
     color:var(--color-primary);
+    margin-bottom: .4em;
 }
 
 .meetup h3{
-    font-size: 12px;
+    font-size: .8em;
     font-family: var(--font-texts);
     color:var(--color-primary);
-    margin-bottom: 6px;
+    margin-bottom: .4em;
+}
+
+.meetup span {
+  font-size: 1em;
+  font-family: var(--font-texts);
+}
+.meetup span img {
+  margin-right: .2em;
+  vertical-align: bottom;
+  width: 20px;
+}
+.meetup span a {
+  color:var(--color-primary);
 }
 
 .meetups form h2{
@@ -345,7 +353,7 @@
     border:none;
 }
 .meetups form input{
-    padding: 16px; 
+    padding: 16px;
     outline: 0;
     border:none;
     background: var(--color-lightGray);
