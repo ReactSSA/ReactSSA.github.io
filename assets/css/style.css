@@ -1,328 +1,353 @@
 /* vars */
 :root {
-    --font-title:'Patua One', cursive;
-    --font-subtitle: 'Fira Sans Extra Condensed', sans-serif;
-    --font-texts: 'Merriweather Sans', sans-serif;
+  --font-title:'Patua One', cursive;
+  --font-subtitle: 'Fira Sans Extra Condensed', sans-serif;
+  --font-texts: 'Merriweather Sans', sans-serif;
 
-    --color-primary: #282d5f;
-    --color-lightBlue: #94fbff;
-    --color-verylightBlue: #EBFEFF;
-    --color-lightGray: #e6e6e6;
-    --color-gray: #bbbbbb;
-    --color-green: #269535;
+  --color-primary: #282d5f;
+  --color-lightBlue: #94fbff;
+  --color-verylightBlue: #EBFEFF;
+  --color-lightGray: #e6e6e6;
+  --color-gray: #bbbbbb;
+  --color-green: #269535;
+  --color-meetup: #f13a59;
 
-    --color-lightText: #888888;
-    --color-text: #5a5a5a;
+  --color-lightText: #888888;
+  --color-text: #5a5a5a;
 }
 
 /* animations */
-@keyframes slideCenter{
-    to{
-        transform: translate(0,0);
-    }
+@keyframes slideCenter {
+  to {
+    transform: translate(0,0);
+  }
 }
-@keyframes fadeScaleOut{
-    from{
-        transform: scale(1.2)
-    }
-    to{
-        transform: scale(1)
-    }
+@keyframes fadeScaleOut {
+  from {
+    transform: scale(1.2)
+  }
+  to {
+    transform: scale(1)
+  }
 }
-@keyframes width{
-    from{
-        width: 0;
-    }
+@keyframes width {
+  from {
+    width: 0;
+  }
 }
-@keyframes textFadeIn{
-    from{
-        opacity: 0;
-        transform: translate(0,60px) rotate(5deg);
-    }
-    to{
-        opacity: 1;
-        transform: translate(0,0) rotate(0);
-    }
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(0,60px) rotate(5deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0) rotate(0);
+  }
 }
-@keyframes loadingFadeIn{
-    from{
-        transform: scale(0.6) translate(-50%,-50%);
-    }
-    to{
-        transform: scale(1) translate(-50%,-50%);
-        opacity: 1;
-    }
+@keyframes loadingFadeIn {
+  from {
+    transform: scale(0.6) translate(-50%,-50%);
+  }
+  to {
+    transform: scale(1) translate(-50%,-50%);
+    opacity: 1;
+  }
 }
-@keyframes loading{
-    to{
-        width: 100%;
-    }
+@keyframes loading {
+  to {
+    width: 100%;
+  }
 }
 
 /* reset */
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* styles */
-.general-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 12px 0;
-    background: white;
-    z-index: 20;
+.general-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+  background: white;
+  z-index: 20;
 }
 
-.general-header.scrolling{
+.general-header.scrolling {
   box-shadow: 0 0 4px #b9b9b9;
 }
 
-.general-header .max-content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between
+.general-header .max-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
 }
 
-.general-header .txtLogo{
-    font-size: 24px;
-    font-family: var(--font-subtitle);
-    text-decoration: none;
-    color:black;
+.general-header .txtLogo {
+  font-size: 24px;
+  font-family: var(--font-subtitle);
+  text-decoration: none;
+  color:black;
 }
-.general-header .txtLogo strong{
-    font-family: var(--font-title);
-}
-
-.general-header nav{
-    display: flex;
-}
-.general-header nav a{
-    font-family: var(--font-texts);
-    padding: 10px 20px;
-    position: relative;
-    color: #34495e;
-    display: block;
-    text-transform: none;
-    font-size: 14px;
-    text-decoration: none;
-}
-.general-header nav a:hover{
-    text-decoration: underline;
+.general-header .txtLogo strong {
+  font-family: var(--font-title);
 }
 
-.max-content{
-    max-width: 1000px;
-    padding: 0 20px;
-    margin: 0 auto;
+.general-header nav {
+  display: flex;
+}
+.general-header nav a {
+  font-family: var(--font-texts);
+  padding: 10px 20px;
+  position: relative;
+  color: #34495e;
+  display: block;
+  text-transform: none;
+  font-size: 14px;
+  text-decoration: none;
+}
+.general-header nav a:hover {
+  text-decoration: underline;
 }
 
-.aboutComunitry{
-    margin: 90px 0;
+.max-content {
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
-.aboutComunitry .max-content, .Comunity .max-content{
-    display: -webkit-flex;
-    display: flex;
+.aboutComunitry {
+  margin: 90px 0;
 }
 
-.aboutComunitryLeftContent{
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: flex-start;
-    align-items: flex-start;
-    -webkit-justify-content: center;
-    justify-content: center;
+.aboutComunitry .max-content, .Comunity .max-content {
+  display: -webkit-flex;
+  display: flex;
 }
 
-.aboutComunitryLeftContent h1, .meetups h1{
-    display: inline-block;
-    font-family: var(--font-title);
-    font-size: 60px;
-    position: relative;
-    z-index: 2;
-    color: var(--color-primary);
-    opacity: 0;
-    margin-bottom: 10px;
-    animation: textFadeIn 0.5s cubic-bezier(0.16, 0.74, 0.11, 0.96) 0.4s forwards;
+.aboutComunitryLeftContent {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.aboutComunitryLeftContent h1, .meetups h1 {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 60px;
+  position: relative;
+  z-index: 2;
+  color: var(--color-primary);
+  opacity: 0;
+  margin-bottom: 10px;
+  animation: textFadeIn 0.5s cubic-bezier(0.16, 0.74, 0.11, 0.96) 0.4s forwards;
 }
 
 .aboutComunitryLeftContent h1:after, .meetups h1:after {
-    content:'';
-    position: absolute;
-    bottom: 6px;
-    left: 0;
-    width: 100%;
-    height: 15px;
-    background: var(--color-lightBlue);
-    z-index: -1;
-    animation: width 0.2s ease-out 0.7s both;
+  content:'';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: var(--color-lightBlue);
+  z-index: -1;
+  animation: width 0.2s ease-out 0.7s both;
 }
 
-.aboutComunitryLeftContent p{
-    font-family: var(--font-texts);
-    font-size: 23px;
-    max-width: 369px;
-    color: var(--color-lightText);
-    line-height: 1.1;
-    opacity: 0;
-    animation: textFadeIn 0.5s ease-in-out 0.4s forwards;
+.aboutComunitryLeftContent > p {
+  font-family: var(--font-texts);
+  font-size: 23px;
+  max-width: 369px;
+  color: var(--color-lightText);
+  line-height: 1.1;
+  opacity: 0;
+  animation: textFadeIn 0.5s ease-in-out 0.4s forwards;
+}
+
+.join-container {
+  color: var(--color-text);
+  margin-top: 2em;
+  font-family: var(--font-texts);
+  opacity: 0;
+  animation: textFadeIn 0.5s ease-out 0.8s forwards;
+}
+
+.join-container h2 {
+  font-size: 1.2rem;
+}
+
+.join-button {
+  background-color: var(--color-meetup);
+  border-radius: .4em;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-texts);
+  margin-top: 1em;
+  padding: .4em .8em;
+  text-decoration: none;
 }
 
 .aboutComunitryRightContent {
-    width: 325px;
-    height: 400px;
-    margin-left: auto;
-    position: relative;
+  width: 325px;
+  height: 400px;
+  margin-left: auto;
+  position: relative;
 }
 
-.aboutComunitryRightContent .backgroundElement{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
+.aboutComunitryRightContent .backgroundElement {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .aboutComunitryRightContent .backgroundElement:after {
-    content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--color-lightBlue);
-    transform: translate(100%, 0);
-    transform-origin: right center;
-    animation: slideCenter cubic-bezier(0.81, 0.15, 0.26, 0.99) 0.4s forwards;
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-lightBlue);
+  transform: translate(100%, 0);
+  transform-origin: right center;
+  animation: slideCenter cubic-bezier(0.81, 0.15, 0.26, 0.99) 0.4s forwards;
 }
 
-.aboutComunitryRightContent .box-logo{
-   position: absolute;
-    width: 320px;
-    height: 360px;
-    overflow: hidden;
-    transform: translate(0, -50%);
-    top: 50%;
-    left: -55px;
+.aboutComunitryRightContent .box-logo {
+  position: absolute;
+  width: 320px;
+  height: 360px;
+  overflow: hidden;
+  transform: translate(0, -50%);
+  top: 50%;
+  left: -55px;
 }
 
-.aboutComunitryRightContent .box-logo:before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: var(--color-gray);
-    transform: translate(-100%,0);
-    transform-origin: center left;
-    animation: slideCenter 0.4s cubic-bezier(0.81, 0.15, 0.26, 0.99) 0.15s  forwards;
+.aboutComunitryRightContent .box-logo:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: var(--color-gray);
+  transform: translate(-100%,0);
+  transform-origin: center left;
+  animation: slideCenter 0.4s cubic-bezier(0.81, 0.15, 0.26, 0.99) 0.15s  forwards;
 }
 
-.aboutComunitryRightContent .logo{
-    background-color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform: translate(100%,0);
-    transform-origin: center right;
-    animation: slideCenter 0.4s cubic-bezier(0.81, 0.15, 0.26, 0.99) 0.4s  forwards;
-    z-index: 2;
+.aboutComunitryRightContent .logo {
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translate(100%,0);
+  transform-origin: center right;
+  animation: slideCenter 0.4s cubic-bezier(0.81, 0.15, 0.26, 0.99) 0.4s  forwards;
+  z-index: 2;
 }
 
-.aboutComunitryRightContent .logo:after{
-    content:'';
-    width: 240px;
-    height: 210px;
-    background: url(../imgs/react-logo-fitas.png) center no-repeat;
-    background-size: cover;
-    animation: fadeScaleOut 0.6s cubic-bezier(0.66,-0.04, 1, 1) 0.2s;
+.aboutComunitryRightContent .logo:after {
+  content:'';
+  width: 240px;
+  height: 210px;
+  background: url(../imgs/react-logo-fitas.png) center no-repeat;
+  background-size: cover;
+  animation: fadeScaleOut 0.6s cubic-bezier(0.66,-0.04, 1, 1) 0.2s;
 }
 
-.Comunity{
-     padding: 70px 0;
-     background: var(--color-verylightBlue);
+.Comunity {
+  padding: 70px 0;
+  background: var(--color-verylightBlue);
 }
 
-.Comunity .aboutComunitryRightContent .backgroundElement:after{
-    background: var(--color-primary);
-    transform: translate(-100%,0);
+.Comunity .aboutComunitryRightContent .backgroundElement:after {
+  background: var(--color-primary);
+  transform: translate(-100%,0);
 }
 
-.Comunity .aboutComunitryRightContent .box-logo:before{
-    transform: translate(100%,0);
+.Comunity .aboutComunitryRightContent .box-logo:before {
+  transform: translate(100%,0);
 }
 
-.Comunity .aboutComunitryRightContent{
-    order: -1;
-    margin-left: 0;
-    margin-right:auto;
+.Comunity .aboutComunitryRightContent {
+  order: -1;
+  margin-left: 0;
+  margin-right:auto;
 }
 
-.Comunity .aboutComunitryRightContent .box-logo{
-    width: 305px;
-    height: 345px;
-    left: auto;
-    right: -40px;
+.Comunity .aboutComunitryRightContent .box-logo {
+  width: 305px;
+  height: 345px;
+  left: auto;
+  right: -40px;
 }
 
-.Comunity .aboutComunitryRightContent .logo{
-    background: url(../imgs/comunity.jpg) center;
-    background-size: cover;
-    transform: translate(-100%,0);
+.Comunity .aboutComunitryRightContent .logo {
+  background: url(../imgs/comunity.jpg) center;
+  background-size: cover;
+  transform: translate(-100%,0);
 }
 
-.Comunity .aboutComunitryRightContent .logo:after{
-    display: none;
+.Comunity .aboutComunitryRightContent .logo:after {
+  display: none;
 }
 
-.Comunity .aboutComunitryLeftContent p{
-    font-size: 18px;
-    line-height: 1.3;
+.Comunity .aboutComunitryLeftContent p {
+  font-size: 18px;
+  line-height: 1.3;
 }
 
-.meetups{
-    padding: 80px 0 90px;
+.meetups {
+  padding: 80px 0 90px;
 }
 
-.meetups-list{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 35px -10px 0;
+.meetups-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 35px -10px 0;
 }
 
-.meetup{
-    padding: 20px;
-    width: calc(33.33% - 62px);
-    min-width: 225px;
-    height: 120px;
-    background: var(--color-verylightBlue);
-    border: 1px solid var(--color-lightBlue);
-    margin: 10px;
-    position: relative;
+.meetup {
+  padding: 20px;
+  width: calc(33.33% - 62px);
+  min-width: 225px;
+  height: 120px;
+  background: var(--color-verylightBlue);
+  border: 1px solid var(--color-lightBlue);
+  margin: 10px;
+  position: relative;
 }
 
-.meetup h2{
-    font-family: var(--font-subtitle);
-    font-size: 1.4em;
-    color:var(--color-primary);
-    margin-bottom: .4em;
+.meetup h2 {
+  font-family: var(--font-subtitle);
+  font-size: 1.4em;
+  color:var(--color-primary);
+  margin-bottom: .4em;
 }
 
-.meetup h3{
-    font-size: .8em;
-    font-family: var(--font-texts);
-    color:var(--color-primary);
-    margin-bottom: .4em;
+.meetup h3 {
+  font-size: .8em;
+  font-family: var(--font-texts);
+  color:var(--color-primary);
+  margin-bottom: .4em;
 }
 
 .meetup span {
@@ -338,173 +363,172 @@
   color:var(--color-primary);
 }
 
-.meetups form h2{
-    display: block;
-    font-family: var(--font-title);
-    font-size: 23px;
-    position: relative;
-    z-index: 2;
-    color: var(--color-primary);
-    margin-bottom: 16px;
-    margin-top: 40px;
+.meetups form h2 {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 23px;
+  position: relative;
+  z-index: 2;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  margin-top: 40px;
 }
 
-.meetups form fieldset{
-    border:none;
+.meetups form fieldset {
+  border:none;
 }
-.meetups form input{
-    padding: 16px;
-    outline: 0;
-    border:none;
-    background: var(--color-lightGray);
-    min-width: 220px;
-    font-family: var(--font-texts);
+.meetups form input {
+  padding: 16px;
+  outline: 0;
+  border:none;
+  background: var(--color-lightGray);
+  min-width: 220px;
+  font-family: var(--font-texts);
 }
-.meetups form button{
-    padding: 14px 16px;
-    border: none;
-    color: var(--color-primary);
-    background: transparent;
-    border: 1px solid var(--color-primary);
-    box-shadow: 2px 2px 0 var(--color-primary);
-    font-family: var(--font-title);
-    transition: all ease-in-out 0.3s;
-    margin-left: 4px;
-    transform: translate(-2px,-2px);
-    cursor: pointer;
-    outline: 0;
-    position: relative;
-}
-
-.meetups form button.active:before{
-    content:'';
-    background: var(--color-green);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    animation: loading 0.4s ease-in-out forwards;
-    z-index: 1;
+.meetups form button {
+  padding: 14px 16px;
+  border: none;
+  color: var(--color-primary);
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  box-shadow: 2px 2px 0 var(--color-primary);
+  font-family: var(--font-title);
+  transition: all ease-in-out 0.3s;
+  margin-left: 4px;
+  transform: translate(-2px,-2px);
+  cursor: pointer;
+  outline: 0;
+  position: relative;
 }
 
-.meetups form button i{
-    position: absolute;
-    font-size: 20px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: white;
-    opacity: 0;
-    z-index: 2;
-    transform-origin: center;
-}
-.meetups form button.active i{
-    animation: loadingFadeIn 0.3s ease-in 0.2s forwards;
+.meetups form button.active:before {
+  content:'';
+  background: var(--color-green);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  animation: loading 0.4s ease-in-out forwards;
+  z-index: 1;
 }
 
-.meetups form button:hover, .meetups form button.active{
-    transform: translate(0,0);
-    box-shadow: 0px 0px 0 var(--color-primary);
+.meetups form button i {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  opacity: 0;
+  z-index: 2;
+  transform-origin: center;
+}
+.meetups form button.active i {
+  animation: loadingFadeIn 0.3s ease-in 0.2s forwards;
 }
 
-.social{
-    padding: 60px 0;
-    background: var(--color-primary);
-    color: white;
+.meetups form button:hover, .meetups form button.active {
+  transform: translate(0,0);
+  box-shadow: 0px 0px 0 var(--color-primary);
 }
 
-.social .max-content{
-    display: flex;
+.social {
+  padding: 60px 0;
+  background: var(--color-primary);
+  color: white;
 }
 
-.social .slack{
-    margin-right: auto;
-    font-family: var(--font-texts);
-    font-size: 14px;
-    display: flex;
-    text-decoration: none;
+.social .max-content {
+  display: flex;
+}
+
+.social .slack {
+  margin-right: auto;
+  font-family: var(--font-texts);
+  font-size: 14px;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+}
+.social .slack i {
+  font-size: 24px;
+  margin-right: 6px;
+}
+
+.social a {
+  font-size: 28px;
+  color: white;
+  padding: 10px;
+}
+
+@media (max-width:768px) {
+  .aboutComunitryRightContent {
+    display: none;
+  }
+
+  .aboutComunitryLeftContent {
+    width: 100%;
     align-items: center;
-}
-.social .slack i{
-    font-size: 24px;
-    margin-right: 6px;
-}
+  }
+  .meetups {
+    text-align: center;
+  }
 
-.social a{
-    font-size: 28px;
-    color: white;
-    padding: 10px;
-}
-
-@media (max-width:768px){
-    .aboutComunitryRightContent{
-        display: none;
-    }
-
-    .aboutComunitryLeftContent{
-        width: 100%;
-        align-items: center;
-    }
-    .meetups{
-        text-align: center;
-    }
-
-    .meetups-list{
-        max-width: 585px;
-        margin: 35px auto 10px;
-    }
+  .meetups-list {
+    max-width: 585px;
+    margin: 35px auto 10px;
+  }
 }
 
-@media (max-width:600px){
-    .general-header nav{
-        display: none;
-    }
-    .general-header .txtLogo{
-        margin: 0 auto;
-    }
-    .aboutComunitry{
-        margin-bottom: 45px;
-    }
-    .Comunity{
-        padding: 45px 0;
-    }
-    .aboutComunitryLeftContent p{
-        font-size: 17px;
-    }
-    .aboutComunitryLeftContent{
-        text-align: center;
-    }
-    .aboutComunitryLeftContent h1, .meetups h1{
-        font-size: 38px;
-    }
+@media (max-width:600px) {
+  .general-header nav {
+    display: none;
+  }
+  .general-header .txtLogo {
+    margin: 0 auto;
+  }
+  .aboutComunitry {
+    margin-bottom: 45px;
+  }
+  .Comunity {
+    padding: 45px 0;
+  }
+  .aboutComunitryLeftContent p {
+    font-size: 17px;
+  }
+  .aboutComunitryLeftContent {
+    text-align: center;
+  }
+  .aboutComunitryLeftContent h1, .meetups h1 {
+    font-size: 38px;
+  }
 
-    .meetups{
-        padding-top: 45px;
-    }
-    .meetups form input, .meetups form button{
-        width: 100%;
-        max-width: none;
-        box-sizing: border-box;
-    }
-    .meetups form h2{
-        margin-top: 55px;
-        margin-bottom: 24px;
-    }
+  .meetups {
+    padding-top: 45px;
+  }
+  .meetups form input, .meetups form button {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+  .meetups form h2 {
+    margin-top: 55px;
+    margin-bottom: 24px;
+  }
 
-    .meetup{
-        width: 100%;
-    }
+  .meetup {
+    width: 100%;
+  }
 
-    .meetups form button{
-        transform: translate(0,0);
-        box-shadow: none;
-        margin-top: 6px;
-        margin-left: 0;
-    }
+  .meetups form button {
+    transform: translate(0,0);
+    box-shadow: none;
+    margin-top: 6px;
+    margin-left: 0;
+  }
 
-    .aboutComunitryLeftContent h1:after, .meetups h1:after{
-        height: 8px;
-    }
-
+  .aboutComunitryLeftContent h1:after, .meetups h1:after {
+    height: 8px;
+  }
 }
