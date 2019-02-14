@@ -329,7 +329,7 @@
   padding: 20px;
   width: calc(33.33% - 62px);
   min-width: 225px;
-  height: 120px;
+  min-height: 120px;
   background: var(--color-verylightBlue);
   border: 1px solid var(--color-lightBlue);
   margin: 10px;
